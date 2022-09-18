@@ -51,6 +51,23 @@ store.remove('sayHi')
 store.trigger('sayHi', 'kim')
 ```
 
+## math
+
+简约版精度计算，如果有很强的精度要求还是建议专业库。
+*因为 js 采用的双精度计算，因此在某一下情况下，计算出来的值是有偏差的。如 `0.1 + 0.2 = 0.30000000000000004`*
+
+- `add(arg1, arg2)`：加法
+- `sub(arg1, arg2)`：减法
+- `mul(arg1, arg2)`：乘法
+- `div(arg1, arg2)`：除法
+
+```javascript
+import { add } from 'math'
+
+const sum = add(0.1, 0.2) // 0.3
+// 乘除减法同理
+```
+
 ## utils
 
 通用工具类

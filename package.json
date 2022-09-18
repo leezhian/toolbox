@@ -1,8 +1,16 @@
 {
   "name": "toolbox",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": ["dist"],
+  "main": "./dist/toolbox.umd.cjs",
+  "module": "./dist/toolbox.js",
+  "exports": {
+    ".": {
+      "import": "./dist/toolbox.js",
+      "require": "./dist/toolbox.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,6 +18,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.185",
+    "@types/node": "^18.7.18",
     "typescript": "^4.6.4",
     "vite": "^3.1.0"
   },

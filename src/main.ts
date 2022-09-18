@@ -1,3 +1,12 @@
-console.log('toolbox')
+import * as tools from '@/utils/utils'
+import { localStorage, sessionStorage } from '@/utils/storage'
+import observer from '@/utils/observer'
 
-export default {}
+const toolbox = {
+  localStorage,
+  sessionStorage,
+  tools,
+  observer,
+}
+
+export default toolbox
